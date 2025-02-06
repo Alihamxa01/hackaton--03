@@ -10,10 +10,22 @@ import { Product } from '../components/ProductList';
 import Header from '../Component/Header/Header'
 import Footer from '../Component/Footer/Footer'
 import Topheadder from '../Page/Topheadder/Topheadder'
+import { ImageUrlBuilder } from '@sanity/image-url/lib/types/builder';
+// import { SanityImageSource } from '@sanity/image-url/lib/types/types';
+
+export interface SanityImage {
+  asset: {
+    _ref: string;
+    _type: string;
+  };
+}
 
 const builder = imageUrlBuilder(client);
 
-function urlFor(source: any) {
+// function urlFor(source: any) {
+//   return builder.image(source);
+// }
+function urlFor(source: SanityImage): ImageUrlBuilder {
   return builder.image(source);
 }
 
