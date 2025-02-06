@@ -60,37 +60,22 @@ function Navbar() {
                 {pageDropdownOpen && (
                   <ul className="absolute left-0 top-[100%] bg-[#f5f5f5] border border-black shadow-md rounded-md p-2 z-50">
                    
-                   <li className="px-4 py-2 hover:bg-gray-200 rounded-3xl">
-                   <Link href="/blog">Blog</Link>
-                 </li>
-                    <li className="px-4 py-2 hover:bg-gray-200 rounded-3xl">
-                      <Link href="/ShopGrid">Shop Grid</Link>
-                    </li>
-                    <li className="px-4 py-2 hover:bg-gray-200 rounded-3xl">
-                      <Link href="/shop-list">Shop List</Link>
-                    </li>
-                    <li className="px-4 py-2 hover:bg-gray-200 rounded-3xl">
-                      <Link href="/shop-left-sidebar">Shop Left Sidebar</Link>
-                    </li>
-                    <li className="px-4 py-2 hover:bg-gray-200 rounded-3xl">
-                      <Link href="/product-details">Product Details</Link>
-                    </li>
+            
+                    
+                    
+                   
                     <li className="px-4 py-2 hover:bg-gray-200 rounded-3xl">
                       <Link href="/Proceed">Cart</Link>
                     </li>
                     <li className="px-4 py-2 hover:bg-gray-200 rounded-3xl">
-                      <Link href="/Order">Your Order</Link>
+                      <Link href="/Order">Order</Link>
                     </li>
                     <li className="px-4 py-2 hover:bg-gray-200 rounded-3xl">
                       <Link href="/Signup">Signup</Link>
                     </li>
                     <li className="px-4 py-2 hover:bg-gray-200 rounded-3xl">
-                      <Link href="/blog">Blog</Link>
+                      <Link href="/Login">Login</Link>
                     </li>
-                  
-                    <li className="px-4 py-2 hover:bg-gray-200 rounded-3xl">
-                <Link href="/shop">Shop</Link>
-              </li>
                   </ul>
                 )}
               </li>

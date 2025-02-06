@@ -2,6 +2,8 @@
 
 import { useState, useCallback } from "react";
 import Header from "../Component/Header/Header";
+import Topheadder from '../Page/Topheadder/Topheadder'
+import Footer from "../Component/Footer/Footer";
 
 // FAQ data
 const faqs = [
@@ -161,8 +163,36 @@ export default function FAQPage() {
   };
 
   return (
-    <div className="min-h-screen  bg-gradient-to-r from-blue-50 via-blue-100 to-blue-50">
+    <div className="min-h-screen  bg-gradient-to-r from-[#F8F8FD] via-slate-100 to-[#F8F8FD]">
+      <Topheadder/>
  <Header/>
+
+
+ {/* Fixed search bar at the bottom */}
+ <footer className=" bg-slate-100 shadow-lg mb-20 mt-5">
+  <div className="max-w-9xl mx-auto py-4 px-4 sm:px-6 lg:px-8 flex justify-center">
+    <div className="relative w-full">
+      <input
+        type="text"
+        placeholder="Search FAQs..."
+        value={searchTerm}
+        onChange={handleSearch}
+        className="w-full pl-10 text-cyan-500 pr-4 py-2 border-2 border-blue-300 rounded-full focus:outline-none focus:border-blue-500"
+      />
+      <svg
+        className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-blue-800"
+        fill="none"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+      </svg>
+    </div>
+  </div>
+</footer>
 
       <main className="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
         <div className="px-4 py-6 sm:px-0">
@@ -205,34 +235,9 @@ export default function FAQPage() {
         </div>
       </main>
       <br/>
-      <br/>
-      <br/>
-      <br/>
-       {/* Fixed search bar at the bottom */}
-       <footer className="fixed bottom-0 left-0 right-0 bg-blue-100 shadow-lg">
-        <div className="max-w-9xl mx-auto py-4 px-4 sm:px-6 lg:px-8 flex justify-center">
-          <div className="relative w-full">
-            <input
-              type="text"
-              placeholder="Search FAQs..."
-              value={searchTerm}
-              onChange={handleSearch}
-              className="w-full pl-10 text-cyan-500 pr-4 py-2 border-2 border-blue-300 rounded-full focus:outline-none focus:border-blue-500"
-            />
-            <svg
-              className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-blue-800"
-              fill="none"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-            </svg>
-          </div>
-        </div>
-      </footer>
+      
+
+      <hr className="w-full border-t border-blue-300 my-4" />
 
 
               {/* Ask a Question Form */}
@@ -273,7 +278,7 @@ export default function FAQPage() {
           </div>
 
 
-
+<Footer/>
     </div>
   );
 }

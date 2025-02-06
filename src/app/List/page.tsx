@@ -3,6 +3,7 @@ import ProductList, { Product } from '../components/ProductList';
 import client from "@/sanity/lib/client";
 import Header from "../Component/Header/Header";
 import Footer from "../Component/Footer/Footer";
+import Topheadder from '../Page/Topheadder/Topheadder'
 
 export default async function page() {
 
@@ -27,6 +28,7 @@ export default async function page() {
 
   return (
     <div>
+      <Topheadder/>
 
         <Header/>
                     <ProductList products={products} />

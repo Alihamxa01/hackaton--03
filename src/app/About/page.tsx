@@ -3,6 +3,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import Topheader from '../Page/Topheadder/Topheadder'
 import Header from '../Component/Header/Header'
+import Footer from '../Component/Footer/Footer'
 
 export default function AboutUs() { 
   return (
@@ -120,6 +121,8 @@ export default function AboutUs() {
 
       </div>
       </main>
+
+      <Footer/>
     </div>
   )
 }

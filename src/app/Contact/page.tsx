@@ -3,7 +3,7 @@ import Header from "../Component/Header/Header"
 import Link from "next/link"
 import { ChevronRight } from 'lucide-react'
 import Image from "next/image";
-
+import Footer from "../Component/Footer/Footer";
 
 export default function Contact() {
   return (
@@ -141,6 +141,7 @@ export default function Contact() {
       </div>
     </div>
     </div>
+    <Footer/>
     </div>
   );
 }
